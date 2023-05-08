@@ -1,8 +1,14 @@
-# React Weather App🌤🌤
+# Meteorology App
 
-This is a sample react weather app.
+This app allows you to check the current weather conditions for a given location. Simply enter the city name and country code, and the app will display the current temperature, wind speed, humidity, and visibility.
 
 Live Demo [here](https://react-weather-app-v1.netlify.app/).
+
+## Getting Started
+
+### Prerequisites
+
+To run this app, you will need to have Node.js and npm installed on your machine.
 
 ## Instructions
 

@@ -3,10 +3,13 @@
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 html {
-  background-color: darkseagreen;
+  background-color:#EFF8FF;
 }
 .app-name {
   font-size: 2.3rem;
+  justify-content: center;
+  display: flex; 
+  align-Items: center;
 }
 
 /* app box */
@@ -17,7 +20,7 @@ html {
   width: 500px;
   min-height: 440px;
   /* background-color: #ffffff; */
-  background-color: rgba(226, 226, 226, 0.2);
+  background-color: #FFE4C4;
   text-align: center;
   margin: 128px auto;
   border-radius: 10px;
@@ -84,4 +87,10 @@ h2 {
   color: rgb(20, 2, 2);
   font-size: 30px;
   margin-top: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

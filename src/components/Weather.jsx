@@ -4,6 +4,7 @@ import axios from 'axios';
 import Loader from 'react-loader-spinner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFrown } from '@fortawesome/free-solid-svg-icons';
+import icon from './img/weather-forecast.png'
 
 function Weather() {
   const [query, setQuery] = useState();
@@ -54,6 +55,9 @@ function Weather() {
       setWeather({ ...weather, loading: true });
       const url = 'https://api.openweathermap.org/data/2.5/weather';
       const appid = 'f00c38e0279b7bc85480c3fe775d518c';
+      
+      // const url = 'https://api.openweathermap.org/data/2.5/weather';
+      // const appid = '9217b8bd1c644e668563fee22875f681';
       //console.log('Enter');
 
       await axios
@@ -79,8 +83,10 @@ function Weather() {
   return (
     <div>
       <h1 className="app-name">
-        Weather App<span>🌤</span>
+      <img src={icon} alt="weather-forecast" width="64px" height="64px" style={{ marginRight: "10px" }}/>
+      Meteorology App
       </h1>
+      
       <div className="search-bar">
         <input
           type="text"
@@ -115,24 +121,33 @@ function Weather() {
         <div>
           <div className="city-name">
             <h2>
-              {weather.data.name}, <span>{weather.data.sys.country}</span>
+              {weather.data.name.toUpperCase()}
             </h2>
           </div>
-          <div className="date">
-            <span>{toDate()}</span>
-          </div>
+          <div>          
+            <p>{weather.data.weather[0].description.toUpperCase()}</p>
+            </div>
           <div className="icon-temp">
             <img
               className=""
               src={`https://openweathermap.org/img/wn/${weather.data.weather[0].icon}@2x.png`}
               alt={weather.data.weather[0].description}
+              width="150px" height="150px"
             />
-            {Math.round(weather.data.main.temp)}
-            <sup className="deg">&deg;C</sup>
+          </div>
+          <div  className="container">
+          <div className="des-wind">
+            <p><strong>Temprature </strong>{weather.data.main.temp}&deg;C</p>
           </div>
           <div className="des-wind">
-            <p>{weather.data.weather[0].description.toUpperCase()}</p>
-            <p>Wind Speed: {weather.data.wind.speed}m/s</p>
+            <p><strong>Wind Speed </strong>{weather.data.wind.speed}m/s</p>
+          </div>
+          <div className="des-wind">
+            <p><strong>Humidity</strong> {weather.data.main.humidity}%</p>
+          </div>
+          <div className="des-wind">
+            <p><strong>Visibility</strong> {weather.data.visibility}km</p>
+          </div>
           </div>
         </div>
       )}
