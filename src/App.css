@@ -38,7 +38,7 @@ html {
   font-size: 16px;
   background-color: white;
   /* background-color: rgba(226, 226, 226, 0.6); */
-  background-image: url(./components/img/searchicon.jpg);
+  background-image: url(./components/img/search-icon.jpg);
   background-position: 10px 10px;
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
