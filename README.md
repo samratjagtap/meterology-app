@@ -2,7 +2,7 @@
 
 This app allows you to check the current weather conditions for a given location. Simply enter the city name and country code, and the app will display the current temperature, wind speed, humidity, and visibility.
 
-Live Demo [here](https://react-weather-app-v1.netlify.app/).
+Live Demo [here](https://meteorology-app.onrender.com/).
 
 ## Getting Started
 
@@ -15,7 +15,7 @@ To run this app, you will need to have Node.js and npm installed on your machine
 First clone this repository.
 
 ```bash
-$ git clone https://github.com/sakilk130/react-weather-app.git
+$ git clone https://github.com/samratjagtap/meterology-app.git
 ```
 
 Install dependencies. Make sure you already have [`nodejs`](https://nodejs.org/en/) & [`npm`](https://www.npmjs.com/) installed in your system.
